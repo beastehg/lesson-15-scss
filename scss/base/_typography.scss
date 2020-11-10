@@ -7,10 +7,10 @@ html {
 }
 
 body {
-	color: $base-text-color;
-	background: $base-background-color;
-	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
-	min-width: $base-min-width;
+	color: $body-text-color;
+	background: $body-background-color;
+	font: #{$body-font-size}/#{$body-line-height} $base-font;
+	min-width: $body-min-width;
 }
 
 img {

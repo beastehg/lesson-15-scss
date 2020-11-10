@@ -1,11 +1,11 @@
-// Общие стили для кнопок 
+// Общие стили для кнопок
 
 .btn {
-	transition: color .15s ease-in-out, border-color .15s ease-in-out, background-color .15s ease-in-out;
+	transition: color 0.3s linear, border-color 0.3s linear;
 	display: inline-block;
 	vertical-align: middle;
 	padding: 10px 20px;
-	border-radius: 3px;
+	border-radius: 5px;
 	text-align: center;
 	border: none;
 
@@ -14,60 +14,65 @@
 		outline: none;
 	}
 
-	// Стили для кнопок без обводки вариант один 
+	// Стили для кнопок без обводки вариант один
 
-	&.btn-primary {
-		background-color: $blue;
-		color: #fff;
+	// &.btn-primary {
+	// 	background-color: $blue;
+	// 	color: #fff;
 
-		&:hover {
-			background-color: $dark-blue;
-		}
-	}
+	// 	&:hover {
+	// 		background-color: $dark-blue;
+	// 	}
+	// }
 
-	// Стили для кнопок без обводки вариант два 
+	// Стили для кнопок без обводки вариант два
 
-	&.btn-secondary {
-		background-color: $green;
-		color: #fff;
+	// &.btn-secondary {
+	// 	background-color: $green;
+	// 	color: #fff;
 
-		&:hover {
-			background-color: $dark-green;
-		}
-	}
+	// 	&:hover {
+	// 		background-color: $dark-green;
+	// 	}
+	// }
 
-	// Стили для кнопок с обводкой вариант один 
+	// Стили для кнопок с обводкой вариант один
 
-	&.btn-outline-primary {
+	&.btn-outline-1 {
 		background-color: transparent;
-		border: 2px solid $blue;
-		color: $blue;
+		padding: 15px 21px;
+		border: 2px solid $white;
+		text-transform: uppercase;
+		color: $white;
+
+		@include media ('>=tablet') {
+					font-size: 16px;
+				}
 
 		&:hover {
-			background-color: $dark-blue;
-			border-color: $dark-blue;
-			color: #fff;
+			border-color: shade($white, 50%);
+			color: shade($white, 50%);
 		}
 	}
 
-	// Стили для кнопок с обводкой вариант два 
+	// Стили для кнопок с обводкой вариант два
 
-	&.btn-outline-secondary {
-		background-color: transparent;
-		border: 2px solid $green;
-		color: $green;
+	// &.btn-outline-secondary {
+	// 	background-color: transparent;
+	// 	border: 2px solid $green;
+	// 	color: $green;
 
-		&:hover {
-			background-color: $dark-green;
-			border-color: $dark-green;
-			color: #fff;
-		}
-	}
+	// 	&:hover {
+	// 		background-color: $dark-green;
+	// 		border-color: $dark-green;
+	// 		color: #fff;
+	// 	}
+	// }
 
-	// Стили для блочной кнопки которая тянется по ширине родителя 
+	// Стили для блочной кнопки которая тянется по ширине родителя
 
-	&.btn-block {
-		display: block;
-		width: 100%;
-	}
+	// &.btn-block {
+	// 	display: block;
+	// 	width: 100%;
+	// }
 }

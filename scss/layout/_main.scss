@@ -1,14 +1,3 @@
-// пример использования media (breakpoints в верху файла)
-body {
-	@include media ('>=tablet') {
-		background-color: #ff0;
-	}
-
-	@include media ('>=desktop') {
-		background-color: tomato;
-	}
-}
-
 .wrapper {
 	overflow: hidden;
 	position: relative;
@@ -21,32 +10,94 @@ body {
 }
 
 // Обертка для полей формы
-
-.form-group {
-	margin-bottom: 15px;
-}
+// .form-group {
+// 	margin-bottom: 15px;
+// }
 
 // Поля формы
+// .form-control {
+// 	display: block;
+// 	width: 100%;
+// 	padding: 10px 15px;
+// }
 
-.form-control {
-	display: block;
-	width: 100%;
-	padding: 10px 15px;
-}
+// .form-control {
+// 	@include placeholder {
+// 		color: $red;
+// 	}
 
-.form-control {
-	@include placeholder {
-		color: $red;
+// 	&:focus {
+// 		border-color: $yellow;
+// 	}
+// }
+
+// .grid {
+// 	img {
+// 		display: block;
+// 		width: 100%;
+// 	}
+// }
+
+
+.flex-top {
+	display: flex;
+	justify-content: center;
+	margin: 34px 0 30px;
+
+	@include media ('>=tablet') {
+		justify-content: flex-start;
 	}
 
-	&:focus {
-		border-color: $yellow;
+	h1 {
+		text-transform: uppercase;
+		padding-bottom: 9px;
+		border-bottom: 4px solid #4e5a62;
+		margin: 0;
+
+		@include media ('>=widescreen') {
+			border-bottom: 0;
+			padding-bottom: 0;
+			padding-left: 17px;
+			border-left: 10px solid #4e5a62;
+			font-size: 36px;
+		}
 	}
 }
 
-.grid {
+.flex-middle {
+	margin: -13px 0;
+
+	@include media ('>=phone') {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -9px -8px;
+	}
+
+	.flex-item {
+		padding: 13px 0;
+
+		@include media ('>=phone') {
+			width: 50%;
+			padding: 9px 8px;
+		}
+
+		@include media ('>=tablet') {
+			width: 33.33%;
+		}
+	}
+
 	img {
-		display: block;
 		width: 100%;
+	}
+}
+
+
+.flex-bottom {
+	display: flex;
+	justify-content: center;
+	margin: 38px 0;
+
+	@include media ('>=tablet') {
+		margin: 42px 0;
 	}
 }
